@@ -10,9 +10,16 @@ body {
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 100px;
   padding: 20px;
   color: white;
+}
+
+.App-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  margin: 0 auto;
 }
 
 .App-intro {
