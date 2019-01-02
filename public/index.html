@@ -7,10 +7,16 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="stylesheet" href="style.css" />
     <title>React App</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="App">
+        <header class="App-header"><h2>Home</h2></header>
+        <p class="App-intro">Loading site...</p>
+      </div>
+    </div>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
