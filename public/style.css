@@ -18,10 +18,6 @@ body {
 .App-navigation {
   display: flex;
   justify-content: space-between;
-  width: 20%;
+  width: 200px;
   margin: 0 auto;
-}
-
-.App-intro {
-  font-size: large;
 }
