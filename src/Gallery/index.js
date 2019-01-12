@@ -26,7 +26,7 @@ class Gallery extends React.Component {
 
   async componentDidMount() {
     try {
-      const response = await fetch('http://localhost:3000/data/photos.json', {
+      const response = await fetch('./data/photos.json', {
         mode: 'no-cors',
       });
 
