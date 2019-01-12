@@ -1,7 +1,13 @@
+// @flow
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default ({ title }) => (
+type Props = {
+  title: string,
+};
+
+export default ({ title }: Props) => (
   <div className="App">
     <header className="App-header">
       <h2>{title}</h2>
@@ -10,7 +16,7 @@ export default ({ title }) => (
     <div className="App-navigation">
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
-      <Link to="/settings">Settings</Link>
+      <Link to="/gallery">Gallery</Link>
     </div>
   </div>
 );
