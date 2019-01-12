@@ -14,6 +14,7 @@ const Container = styled.div`
 const Photo = styled.img`
   width: 300px;
   height: 300px;
+  object-fit: cover;
   padding: 10px;
 `;
 
@@ -25,7 +26,9 @@ class Gallery extends React.Component {
 
   async componentDidMount() {
     try {
-      const response = await fetch('http://localhost:3000/data/photos.json');
+      const response = await fetch('http://localhost:3000/data/photos.json', {
+        mode: 'no-cors',
+      });
 
       // проверка на 404 и 500 ошибки
       if (!response.ok) {
