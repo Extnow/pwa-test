@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Page from '../Header';
+import Loader from '../Loader';
 
 const Container = styled.div`
   display: flex;
@@ -30,7 +31,6 @@ class Gallery extends React.Component {
         mode: 'no-cors',
       });
 
-      // проверка на 404 и 500 ошибки
       if (!response.ok) {
         throw Error(response.statusText);
       }
@@ -48,6 +48,7 @@ class Gallery extends React.Component {
       <React.Fragment>
         <Page title="Gallery" />
         <Container>
+          {!isPhotosLoaded && <Loader />}
           {photos &&
             photos.map(item => (
               <Photo
@@ -56,7 +57,6 @@ class Gallery extends React.Component {
                 alt={`${item.caption}`}
               />
             ))}
-          {!isPhotosLoaded && <p>Загружаем фотки</p>}
         </Container>
       </React.Fragment>
     );
