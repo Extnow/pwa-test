@@ -1,6 +1,5 @@
 import React from 'react';
-import Page from '../Header';
 
-const Home = () => <Page title="Home" />;
+const Home = () => <div />;
 
 export default Home;

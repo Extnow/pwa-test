@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Page from '../Header';
 import Loader from '../Loader';
 
 const Container = styled.div`
@@ -46,17 +45,10 @@ class Gallery extends React.Component {
     const { photos, isPhotosLoaded } = this.state;
     return (
       <React.Fragment>
-        <Page title="Gallery" />
         <Container>
           {!isPhotosLoaded && <Loader />}
           {photos &&
-            photos.map(item => (
-              <Photo
-                key={item.id}
-                src={`${item.src}`}
-                alt={`${item.caption}`}
-              />
-            ))}
+            photos.map(item => <Photo key={item.id} src={`${item.src}`} alt={`${item.caption}`} />)}
         </Container>
       </React.Fragment>
     );
