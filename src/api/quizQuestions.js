@@ -3,19 +3,19 @@ const quizQuestions = [
     question: 'В каком году началась вторая мировая война?',
     answers: [
       {
-        type: true,
+        type: 1,
         content: '1939',
       },
       {
-        type: false,
+        type: 0,
         content: '1941',
       },
       {
-        type: false,
+        type: 0,
         content: '1914',
       },
       {
-        type: false,
+        type: 0,
         content: '1945',
       },
     ],
@@ -24,19 +24,19 @@ const quizQuestions = [
     question: 'Кто был первым президентом СССР?',
     answers: [
       {
-        type: true,
+        type: 1,
         content: 'Михаил Горбачев',
       },
       {
-        type: false,
+        type: 0,
         content: 'Иосиф Сталин',
       },
       {
-        type: false,
+        type: 0,
         content: 'Борис Ельцин',
       },
       {
-        type: false,
+        type: 0,
         content: 'Владимир Путин',
       },
     ],
@@ -45,19 +45,19 @@ const quizQuestions = [
     question: 'В какие годы шла Крымская война?',
     answers: [
       {
-        type: false,
+        type: 0,
         content: '1861-1864',
       },
       {
-        type: false,
+        type: 0,
         content: '1903-1905',
       },
       {
-        type: true,
+        type: 1,
         content: '1853-1856',
       },
       {
-        type: false,
+        type: 0,
         content: '1878-1881',
       },
     ],
@@ -66,19 +66,19 @@ const quizQuestions = [
     question: 'Северная война 1700-1721 гг. завершилась подписанием ',
     answers: [
       {
-        type: true,
+        type: 1,
         content: 'Ништадтского мира',
       },
       {
-        type: false,
+        type: 0,
         content: 'Столбовского мира',
       },
       {
-        type: false,
+        type: 0,
         content: 'Деулинского перемирия',
       },
       {
-        type: false,
+        type: 0,
         content: 'Вечного мира',
       },
     ],
@@ -87,19 +87,19 @@ const quizQuestions = [
     question: 'Как называлась первая печатная книга на Руси?',
     answers: [
       {
-        type: true,
+        type: 1,
         content: 'Апостол',
       },
       {
-        type: false,
+        type: 0,
         content: 'Домострой',
       },
       {
-        type: false,
+        type: 0,
         content: 'Букварь',
       },
       {
-        type: false,
+        type: 0,
         content: 'Царствие',
       },
     ],

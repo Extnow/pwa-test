@@ -1,9 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const QuestionCount = ({ counter, total }) => (
-  <React.Fragment>
-    Question <span>{counter}</span> of <span>{total}</span>
-  </React.Fragment>
-);
+const Count = styled.div`
+  color: #888;
+`;
+
+const QuestionCount = ({ counter, total }) => <Count>{`Вопрос ${counter} из ${total}`}</Count>;
 
 export { QuestionCount };

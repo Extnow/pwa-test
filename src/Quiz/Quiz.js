@@ -4,12 +4,19 @@ import { Question } from './Question';
 import { QuestionCount } from './QuestionCount';
 import { AnswerOption } from './AnswerOption';
 
-const Quiz = ({ questionId, questionTotal, question, answer, onAnswerSelection }) => (
+const Quiz = ({
+  questionId,
+  questionTotal,
+  question,
+  answer,
+  answerOptions,
+  onAnswerSelection,
+}) => (
   <>
     <QuestionCount counter={questionId} total={questionTotal} />
     <Question content={question} />
     <ul>
-      {AnswerOption.map(key => (
+      {answerOptions.map(key => (
         <AnswerOption
           key={key.content}
           answerContent={key.content}

@@ -10,10 +10,10 @@ body {
 
 .App-header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #222;
-  height: 100px;
   padding: 20px;
   color: white;
   margin-bottom: 50px;
@@ -24,5 +24,9 @@ body {
   justify-content: space-between;
   width: 200px;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding: 20px;
+}
+
+.link {
+  color: #fff;
 }
