@@ -10,10 +10,12 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <Route path="/" component={Header} />
-          <Route exact path="/" component={Home} />
-          <Route exact path="/quiz" component={AppQuiz} />
-          <Route exact path="/gallery" component={Gallery} />
+          <div className="App">
+            <Route path="/" component={Header} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/quiz" component={AppQuiz} />
+            <Route exact path="/gallery" component={Gallery} />
+          </div>
         </React.Fragment>
       </BrowserRouter>
     );

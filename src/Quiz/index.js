@@ -82,7 +82,7 @@ class AppQuiz extends React.Component {
 
     this.setUserAnswer(event.currentTarget.value);
     if (questionId < quizQuestions.length) {
-      setTimeout(() => this.setNewQuestion(), 300);
+      this.setNewQuestion();
     } else {
       setTimeout(() => this.setResults(), 300);
     }

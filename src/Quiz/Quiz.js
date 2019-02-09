@@ -1,8 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { Question } from './Question';
 import { QuestionCount } from './QuestionCount';
 import { AnswerOption } from './AnswerOption';
+
+const AnswersList = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+`;
 
 const Quiz = ({
   questionId,
@@ -15,7 +22,7 @@ const Quiz = ({
   <>
     <QuestionCount counter={questionId} total={questionTotal} />
     <Question content={question} />
-    <ul>
+    <AnswersList>
       {answerOptions.map(key => (
         <AnswerOption
           key={key.content}
@@ -26,7 +33,7 @@ const Quiz = ({
           onAnswerSelection={onAnswerSelection}
         />
       ))}
-    </ul>
+    </AnswersList>
   </>
 );
 
