@@ -9,8 +9,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-width: 90%;
+  max-width: 800px;
+  padding: 20px 0px 0px;
   margin: 0 auto;
+  background-color: #fff;
 `;
 
 class AppQuiz extends React.Component {
@@ -84,7 +86,7 @@ class AppQuiz extends React.Component {
     if (questionId < quizQuestions.length) {
       this.setNewQuestion();
     } else {
-      setTimeout(() => this.setResults(), 300);
+      this.setResults();
     }
   };
 

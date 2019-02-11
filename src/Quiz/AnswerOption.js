@@ -8,12 +8,13 @@ const Text = styled.span`
 const Label = styled.label`
   display: flex;
   align-items: flex-start;
-  padding: 10px;
+  padding: 20px 20px;
   cursor: pointer;
   font-size: 18px;
+  border-top: 1px solid #eee
 
   &:hover {
-    background-color: #eee;
+    background-color: #ddf;
   }
 `;
 

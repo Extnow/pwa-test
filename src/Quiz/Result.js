@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Result = ({ quizResult }) => <div>Вы ответили правильно на {quizResult} вопросов</div>;
+const Result = ({ quizResult }) => <p>Количество правильных ответов: {quizResult}</p>;
 
 export { Result };
