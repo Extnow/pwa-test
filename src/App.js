@@ -12,7 +12,7 @@ export default class App extends Component {
         <React.Fragment>
           <div className="App">
             <Route path="/" component={Header} />
-            <Route exact path="/home" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/quiz" component={AppQuiz} />
             <Route exact path="/gallery" component={Gallery} />
           </div>

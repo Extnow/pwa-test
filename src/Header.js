@@ -23,9 +23,15 @@ const Link = styled(NavLink)`
 
 const Header = () => (
   <header className="App-header">
-    <Link to="/home">Home</Link>
-    <Link to="/quiz">Quiz</Link>
-    <Link to="/gallery">Gallery</Link>
+    <Link exact to="/">
+      Home
+    </Link>
+    <Link exact to="/quiz">
+      Quiz
+    </Link>
+    <Link exact to="/gallery">
+      Gallery
+    </Link>
   </header>
 );
 
