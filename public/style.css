@@ -11,23 +11,10 @@ body {
 
 .App-header {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #222;
-  padding: 20px;
-  color: white;
+  background-color: #fff;
+  padding-top: 20px;
   margin-bottom: 50px;
-}
-
-.App-navigation {
-  display: flex;
-  justify-content: space-between;
-  width: 200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.link {
-  color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }

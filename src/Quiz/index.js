@@ -94,7 +94,7 @@ class AppQuiz extends React.Component {
     const { answer, answerOptions, question, questionId, result } = this.state;
     return (
       <Container>
-        {result ? (
+        {result !== '' ? (
           <Result quizResult={result} />
         ) : (
           <Quiz
