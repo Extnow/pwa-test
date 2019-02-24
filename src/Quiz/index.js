@@ -90,12 +90,16 @@ class AppQuiz extends React.Component {
     }
   };
 
+  refreshQuiz = () => {
+    window.location.reload();
+  };
+
   render() {
     const { answer, answerOptions, question, questionId, result } = this.state;
     return (
       <Container>
         {result !== '' ? (
-          <Result quizResult={result} />
+          <Result quizResult={result} refreshQuiz={this.refreshQuiz} />
         ) : (
           <Quiz
             answer={answer}
