@@ -5,7 +5,7 @@ import { Quiz } from './Quiz';
 import { quizQuestions } from '../api/quizQuestions';
 import { Result } from './Result';
 
-const Container = styled.div`
+const Container = styled.main`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

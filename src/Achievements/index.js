@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Achievement } from './Achievement';
 import { achievements } from '../api/achievments';
 
-const Container = styled.div`
+const Container = styled.main`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
