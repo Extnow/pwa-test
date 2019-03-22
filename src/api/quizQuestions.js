@@ -45,16 +45,16 @@ const quizQuestions = [
     question: 'В какие годы шла Крымская война?',
     answers: [
       {
+        type: 1,
+        content: '1853-1856',
+      },
+      {
         type: 0,
         content: '1861-1864',
       },
       {
         type: 0,
         content: '1903-1905',
-      },
-      {
-        type: 1,
-        content: '1853-1856',
       },
       {
         type: 0,

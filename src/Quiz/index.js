@@ -15,6 +15,23 @@ const Container = styled.div`
   background-color: #fff;
 `;
 
+const shuffleArray = array => {
+  let currentIndex = array.length,
+    temporaryValue,
+    randomIndex;
+
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+};
+
 class AppQuiz extends React.Component {
   state = {
     counter: 0,
@@ -27,7 +44,7 @@ class AppQuiz extends React.Component {
   };
 
   componentDidMount() {
-    const shuffleAnswerOption = quizQuestions.map(question => this.shuffleArray(question.answers));
+    const shuffleAnswerOption = quizQuestions.map(question => shuffleArray(question.answers));
 
     this.setState({
       question: quizQuestions[0].question,
@@ -35,25 +52,7 @@ class AppQuiz extends React.Component {
     });
   }
 
-  shuffleArray = array => {
-    let currentIndex = array.length,
-      temporaryValue,
-      randomIndex;
-
-    while (0 !== currentIndex) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-
-    return array;
-  };
-
   setUserAnswer = answer => {
-    console.log(answer);
     if (answer === '1') {
       this.setState(state => ({
         answerCount: state.answerCount + 1,
@@ -76,7 +75,7 @@ class AppQuiz extends React.Component {
   };
 
   setResults = () => {
-    this.setState({ result: this.state.answerCount });
+    this.setState(state => ({ result: state.answerCount }));
   };
 
   handleAnswerSelected = event => {
@@ -96,10 +95,11 @@ class AppQuiz extends React.Component {
 
   render() {
     const { answer, answerOptions, question, questionId, result } = this.state;
+
     return (
       <Container>
         {result !== '' ? (
-          <Result quizResult={result} refreshQuiz={this.refreshQuiz} />
+          <Result result={result} refreshQuiz={this.refreshQuiz} />
         ) : (
           <Quiz
             answer={answer}

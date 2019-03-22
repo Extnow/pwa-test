@@ -11,12 +11,23 @@ const Button = styled.button`
   padding: 5px 10px;
 `;
 
-const Result = ({ quizResult, refreshQuiz }) => (
-  <>
-    <p>Количество правильных ответов: {quizResult}</p>
-    <ButtonWrapper>
-      <Button onClick={refreshQuiz}>Пройти викторину снова</Button>
-    </ButtonWrapper>
-  </>
-);
+const Result = ({ result, refreshQuiz }) => {
+  const checkBestResult = () => {
+    const bestResult = localStorage.getItem('bestResult');
+    if (result > bestResult) {
+      localStorage.setItem('bestResult', result);
+    }
+  };
+
+  return (
+    <>
+      {checkBestResult()}
+      <p>Количество правильных ответов: {result}</p>
+      <ButtonWrapper>
+        <Button onClick={refreshQuiz}>Пройти викторину снова</Button>
+      </ButtonWrapper>
+    </>
+  );
+};
+
 export { Result };
