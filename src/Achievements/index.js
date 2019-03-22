@@ -14,7 +14,7 @@ const Container = styled.div`
   background-color: #fff;
 `;
 
-const AchievementList = styled.ul`
+const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -23,38 +23,28 @@ const AchievementList = styled.ul`
   list-style-type: none;
 `;
 
-const AchievementItem = styled.li`
-  padding: 0;
+const Item = styled.li`
   margin: 10px;
 `;
 
 class Achievements extends React.Component {
   state = {
-    items: achievements,
+    achievements,
   };
 
   render() {
-    const { items } = this.state;
+    const { achievements } = this.state;
 
     return (
-      <>
-        <Container>
-          <AchievementList>
-            {items.map(item => (
-              <AchievementItem key={item.id}>
-                <Achievement
-                  key={item.id}
-                  id={item.id}
-                  isDone={item.isDone}
-                  type={item.type}
-                  img={item.img}
-                  text={item.text}
-                />
-              </AchievementItem>
-            ))}
-          </AchievementList>
-        </Container>
-      </>
+      <Container>
+        <List>
+          {achievements.map(achievement => (
+            <Item key={achievement.id}>
+              <Achievement img={achievement.img} text={achievement.text} />
+            </Item>
+          ))}
+        </List>
+      </Container>
     );
   }
 }
