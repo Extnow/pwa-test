@@ -11,16 +11,23 @@ const Label = styled.label`
   padding: 20px 20px;
   cursor: pointer;
   font-size: 18px;
-  border-top: 1px solid #eee
+  border-top: 1px solid #eee;
+  background-color: #fff;
 
   &:hover {
     background-color: #ddf;
+  }
+
+  @media (pointer: coarse) {
+    &:hover {
+      background-color: #fff;
+    }
   }
 `;
 
 const AnswerOption = ({ answerType, answer, onAnswerSelection, answerContent }) => (
   <li>
-    <Label>
+    <Label aria-haspopup="true">
       <input
         type="radio"
         name="radioGroup"
