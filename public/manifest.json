@@ -1,6 +1,8 @@
 {
   "short_name": "PWA",
   "name": "Progressive Web App",
+  "lang": "ru",
+  "description": "Демка по созданию прогрессивыных веб приложений",
   "icons": [
     {
       "src": "icon-192x192.png",
