@@ -15,6 +15,7 @@ window.self.addEventListener('activate', event => {
             console.log('Deleting cache: ' + key);
             return caches.delete(key);
           }
+          return null;
         }),
       ),
     ),
