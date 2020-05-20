@@ -1,8 +1,8 @@
 {
-  "short_name": "PWA",
-  "name": "Progressive Web App",
+  "short_name": "HQ",
+  "name": "Historical quiz",
   "lang": "ru",
-  "description": "Демка по созданию прогрессивыных веб приложений",
+  "description": "Прототип образовательной исторической викторины",
   "icons": [
     {
       "src": "icon-192x192.png",
@@ -20,3 +20,6 @@
   "theme_color": "#222",
   "display": "standalone"
 }
+
+
+
