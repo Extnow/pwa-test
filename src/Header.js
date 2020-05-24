@@ -4,6 +4,16 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
+const HeaderStyled = styled.header`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding-top: 20px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+`;
+
 const Link = styled(NavLink)`
   color: #666;
   text-decoration: none;
@@ -22,7 +32,7 @@ const Link = styled(NavLink)`
 `;
 
 const Header = () => (
-  <header className="App-header">
+  <HeaderStyled>
     <Link exact to="/">
       Главная
     </Link>
@@ -32,7 +42,7 @@ const Header = () => (
     <Link exact to="/achievements">
       Достижения
     </Link>
-  </header>
+  </HeaderStyled>
 );
 
 export { Header };
