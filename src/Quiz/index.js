@@ -33,7 +33,7 @@ const shuffleArray = (array) => {
   return array;
 };
 
-class AppQuiz extends React.Component {
+export class AppQuiz extends React.Component {
   state = {
     counter: 0,
     questionId: 1,
@@ -115,5 +115,3 @@ class AppQuiz extends React.Component {
     );
   }
 }
-
-export default AppQuiz;

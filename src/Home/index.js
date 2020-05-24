@@ -29,7 +29,7 @@ const ImgWrapper = styled.div`
   margin-bottom: 20px;
 `;
 
-const Home = () => (
+export const Home = () => (
   <Container>
     <Title>Главная страница</Title>
     <Description>
@@ -61,5 +61,3 @@ const Home = () => (
     </Description>
   </Container>
 );
-
-export default Home;
