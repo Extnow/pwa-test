@@ -13,9 +13,10 @@ const Container = styled.main`
   padding: 20px 0px 0px;
   margin: 0 auto;
   background-color: #fff;
+  text-align: center;
 `;
 
-const shuffleArray = array => {
+const shuffleArray = (array) => {
   let currentIndex = array.length,
     temporaryValue,
     randomIndex;
@@ -40,23 +41,23 @@ class AppQuiz extends React.Component {
     answerOptions: [],
     answer: '',
     answerCount: 0,
-    result: '',
+    result: ''
   };
 
   componentDidMount() {
-    const shuffleAnswerOption = quizQuestions.map(question => shuffleArray(question.answers));
+    const shuffleAnswerOption = quizQuestions.map((question) => shuffleArray(question.answers));
 
     this.setState({
       question: quizQuestions[0].question,
-      answerOptions: shuffleAnswerOption[0],
+      answerOptions: shuffleAnswerOption[0]
     });
   }
 
-  setUserAnswer = answer => {
+  setUserAnswer = (answer) => {
     if (answer === '1') {
-      this.setState(state => ({
+      this.setState((state) => ({
         answerCount: state.answerCount + 1,
-        answer: answer,
+        answer: answer
       }));
     }
   };
@@ -70,15 +71,15 @@ class AppQuiz extends React.Component {
       questionId: questionId,
       question: quizQuestions[counter].question,
       answerOptions: quizQuestions[counter].answers,
-      answer: '',
+      answer: ''
     });
   };
 
   setResults = () => {
-    this.setState(state => ({ result: state.answerCount }));
+    this.setState((state) => ({ result: state.answerCount }));
   };
 
-  handleAnswerSelected = event => {
+  handleAnswerSelected = (event) => {
     const { questionId } = this.state;
 
     this.setUserAnswer(event.currentTarget.value);

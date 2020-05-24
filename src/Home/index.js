@@ -14,6 +14,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   max-width: 90%;
   margin: 0 auto;
+  text-align: center;
 `;
 
 const Description = styled.p`

@@ -7,6 +7,7 @@ const Card = styled.div`
   border-radius: 9px;
   padding: 10px;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.11);
+  text-align: center;
 `;
 
 const Image = styled.img`
