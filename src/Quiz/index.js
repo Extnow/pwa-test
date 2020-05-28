@@ -49,7 +49,8 @@ export class AppQuiz extends React.Component {
 
     this.setState({
       question: quizQuestions[0].question,
-      answerOptions: shuffleAnswerOption[0]
+      answerOptions: shuffleAnswerOption[0],
+      answerImage: quizQuestions[0].img
     });
   }
 
@@ -71,6 +72,7 @@ export class AppQuiz extends React.Component {
       questionId: questionId,
       question: quizQuestions[counter].question,
       answerOptions: quizQuestions[counter].answers,
+      answerImage: quizQuestions[counter].img,
       answer: ''
     });
   };
@@ -95,7 +97,7 @@ export class AppQuiz extends React.Component {
   };
 
   render() {
-    const { answer, answerOptions, question, questionId, result } = this.state;
+    const { answer, answerOptions, question, questionId, result, answerImage } = this.state;
 
     return (
       <Container>
@@ -107,6 +109,7 @@ export class AppQuiz extends React.Component {
             answerOptions={answerOptions}
             question={question}
             questionId={questionId}
+            questionImg={answerImage}
             questionTotal={quizQuestions.length}
             onAnswerSelection={this.handleAnswerSelected}
           />

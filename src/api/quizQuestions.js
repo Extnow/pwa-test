@@ -1,109 +1,110 @@
 const quizQuestions = [
   {
     question: 'В каком году началась вторая мировая война?',
+    img: 'https://cdn5.vedomosti.ru/image/2020/35/1egdxv/original-1te2.jpg',
     answers: [
       {
         type: 1,
-        content: '1939',
+        content: '1939'
       },
       {
         type: 0,
-        content: '1941',
+        content: '1941'
       },
       {
         type: 0,
-        content: '1914',
+        content: '1914'
       },
       {
         type: 0,
-        content: '1945',
-      },
-    ],
+        content: '1945'
+      }
+    ]
   },
   {
     question: 'Кто был первым президентом СССР?',
     answers: [
       {
         type: 1,
-        content: 'Михаил Горбачев',
+        content: 'Михаил Горбачев'
       },
       {
         type: 0,
-        content: 'Иосиф Сталин',
+        content: 'Иосиф Сталин'
       },
       {
         type: 0,
-        content: 'Борис Ельцин',
+        content: 'Борис Ельцин'
       },
       {
         type: 0,
-        content: 'Владимир Путин',
-      },
-    ],
+        content: 'Владимир Путин'
+      }
+    ]
   },
   {
     question: 'В какие годы шла Крымская война?',
     answers: [
       {
         type: 1,
-        content: '1853-1856',
+        content: '1853-1856'
       },
       {
         type: 0,
-        content: '1861-1864',
+        content: '1861-1864'
       },
       {
         type: 0,
-        content: '1903-1905',
+        content: '1903-1905'
       },
       {
         type: 0,
-        content: '1878-1881',
-      },
-    ],
+        content: '1878-1881'
+      }
+    ]
   },
   {
     question: 'Северная война 1700-1721 гг. завершилась подписанием ',
     answers: [
       {
         type: 1,
-        content: 'Ништадтского мира',
+        content: 'Ништадтского мира'
       },
       {
         type: 0,
-        content: 'Столбовского мира',
+        content: 'Столбовского мира'
       },
       {
         type: 0,
-        content: 'Деулинского перемирия',
+        content: 'Деулинского перемирия'
       },
       {
         type: 0,
-        content: 'Вечного мира',
-      },
-    ],
+        content: 'Вечного мира'
+      }
+    ]
   },
   {
     question: 'Как называлась первая печатная книга на Руси?',
     answers: [
       {
         type: 1,
-        content: 'Апостол',
+        content: 'Апостол'
       },
       {
         type: 0,
-        content: 'Домострой',
+        content: 'Домострой'
       },
       {
         type: 0,
-        content: 'Букварь',
+        content: 'Букварь'
       },
       {
         type: 0,
-        content: 'Царствие',
-      },
-    ],
-  },
+        content: 'Царствие'
+      }
+    ]
+  }
 ];
 
 export { quizQuestions };

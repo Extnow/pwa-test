@@ -10,7 +10,7 @@ const HeaderStyled = styled.header`
   align-items: center;
   background-color: #fff;
   padding-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 `;
 

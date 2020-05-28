@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Text = styled.span`
-  margin-left: 10px;
-`;
+const Text = styled.span``;
 
 const Label = styled.label`
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   padding: 20px 20px;
   cursor: pointer;
   font-size: 18px;
@@ -25,10 +24,14 @@ const Label = styled.label`
   }
 `;
 
+const InputRadio = styled.input`
+  display: none;
+`;
+
 const AnswerOption = ({ answerType, answer, onAnswerSelection, answerContent }) => (
   <li>
     <Label aria-haspopup="true">
-      <input
+      <InputRadio
         type="radio"
         name="radioGroup"
         checked={answerType === answer}
